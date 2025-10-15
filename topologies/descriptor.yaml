@@ -1288,6 +1288,11 @@ projects:
       added_by: automation-script
       added_on: '2025-10-15'
       notes: Custom metadata for last topic
+      name: esub vali sayyed
+      config:
+        num.partitions: '3'
+        confluent.key.schema.validation: true
+        confluent.value.schema.validation: true
   schemas:
   - principal: Group:GG_ESS_C3_AL04360_DEFAULT
     subjects:
