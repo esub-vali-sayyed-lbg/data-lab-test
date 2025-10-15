@@ -1284,10 +1284,6 @@ projects:
       confluent.key.schema.validation: true
       confluent.value.schema.validation: true
     custom:
-      owner: Sayyed Esub Vali
-      added_by: automation-script
-      added_on: '2025-10-15'
-      notes: Custom metadata for last topic
       name: esub vali sayyed
       config:
         num.partitions: '3'
