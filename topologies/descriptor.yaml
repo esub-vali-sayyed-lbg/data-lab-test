@@ -1289,6 +1289,91 @@ projects:
           num.partitions: "3"
           confluent.key.schema.validation: true
           confluent.value.schema.validation: true                                        
+      - name: "AL04360-MSP-RAW.mor45dg.mor45.ps_filter"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dg.mor45.prop_schedule_dtls"
+        config:
+          num.partitions: "3"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dh.mor45.prop_class_typ"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dh.mor45.product_unit_typ"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dg.mor45.product_unit"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dh.mor45.product_rel"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dh.mor45.product_exceptions"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dg.mor45.product"
+        config:
+          num.partitions: "3"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dh.mor45.prod_unt_agmnt_typ"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dh.mor45.prod_unit_rel_typ"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dg.mor45.prod_unit_rel"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dg.mor45.prod_unit_agmnt"
+        config:
+          num.partitions: "3"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dg.mor45.prod_trans"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dh.mor45.prod_rel_typ"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dg.mor45.prod_incentive"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dh.mor45.not_proceeding_typ"
+        config:
+          num.partitions: "1"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
+      - name: "AL04360-MSP-RAW.mor45dg.mor45.agmnt_accept_dtls"
+        config:
+          num.partitions: "3"
+          confluent.key.schema.validation: true
+          confluent.value.schema.validation: true
     schemas:
       - principal: "Group:GG_ESS_C3_AL04360_DEFAULT"
         subjects:
