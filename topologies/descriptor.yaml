@@ -1,1345 +1,1430 @@
 ---
 context: AL04360
 projects:
-  - name: ap-edh-msp-int-chunk1
-    al04360_producer_role:
-      - principal: User:msp01-appduv032e.machine.test.group
-        topic: AL04360-
-      - principal: User:msp-appduvab70.onprem.cloud.test.group
-        topic: AL04360-
-      - principal: User:GG_ESS_C3_AL04360_DEFAULT
-        topic: AL04360-
-    al04360_consumer_role:
-      - principal: User:msp01-appduv032e.machine.test.group
-        topic: AL04360-
-      - principal: User:msp-appduvab70.onprem.cloud.test.group
-        topic: AL04360-
-      - principal: User:replicator.sbs-int.oncp.group
-        topic: AL04360-
-      - principal: User:SRVAPPKAASREP01
-        topic: AL04360-
-      - principal: User:replicator-edhmsp.sbs-int.oncp.group
-        topic: AL04360-
-      - principal: User:clesskaas.sbs-int.oncp.group
-        topic: AL04360-
-      - principal: User:GG_ESS_C3_AL04360_DEFAULT
-        topic: AL04360-
-    al04360_consumer_group_role:
-      - principal: User:msp01-appduv032e.machine.test.group
-        group: msp01-appduv032e.machine.test.group
-      - principal: User:msp-appduvab70.onprem.cloud.test.group
-        group: msp-appduvab70.onprem.cloud.test.group
-      - principal: User:replicator.sbs-int.oncp.group
-        group: ap-edh-al04360
-      - principal: User:SRVAPPKAASREP01
-        group: ap-edh-al04360
-      - principal: User:replicator-edhmsp.sbs-int.oncp.group
-        group: ap-edh-al04360
-      - principal: User:clesskaas.sbs-int.oncp.group
-        group: ap-edh-al04360
-      - principal: User:GG_ESS_C3_AL04360_DEFAULT
-        group: ap-edh-al04360
-    al04360_c3_role:
-      - principal: Group:GG_ESS_C3_AL04360_DEFAULT
-        topic: AL04360-
-      - principal: User:GG_ESS_C3_AL04360_DEFAULT
-        topic: AL04360-
-    al04360_c3_group_role:
-      - principal: Group:GG_ESS_C3_AL04360_DEFAULT
-        group: AL04360-
-      - principal: User:GG_ESS_C3_AL04360_DEFAULT
-        group: AL04360-
-    topics:
-      - name: MSP-RAW.mor45dg.mor45.agmnt
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.agmnt_event
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_sub_account
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.intd_principal_fca
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.mortgage_agmnt
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.party_role
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.quot_illus
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.quotation
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.e_doc_metadata
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.e_doc_request
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.e_doc_response
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.agmnt_sub_status
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.aiv_score_dtl_hist
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_mort_agmnt
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.valuation_status
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.valuation_survey
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.sort_codes
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.il_invalid_rea_typ
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.illustration
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.agmnt_status
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.response_typ
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.funds_return
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.org_unit
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.agmnt_context
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.agmnt_info
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dj.mor45.completion_hist
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.offer
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.offer_spec_cond
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.pe_print_request
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.emt_info
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.agmnt_intrvw_dtl
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.doc_history
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.postal_addr
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.document
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.other_income_info
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dj.mor45.agmnt_status_hist
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.property
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.account_holdings
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.addr
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.addr_role
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.addr_role_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.addr_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.address_history
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.agmnt_event_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.agmnt_info_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.agmnt_info_typ_dtl
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.agmnt_status_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.agmnt_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.arr_fee_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.brand_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.caps_result
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.caps_result_dtl
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.case
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.case_note
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.case_status
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.comment_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.commitments
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.condition_purp_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.cr_score
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.cust_skill_lvl_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.ecom_channel_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.email_addr
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.emt_cont_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.emt_info_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.emt_summary
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.existing_prop
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.exp_summary
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.expenditure
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.expenditure_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.feature
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.feature_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_intro_fees
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_investment
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_monthly_pmnt
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_mort_calc
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_mort_fact_find
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_mort_prod_fact
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_property
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_repay_vehicle
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_sa_mnthly_pmnt
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_sa_redemption
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_sec_prop_featur
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_second_property
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.illustration_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.inc_verification
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.income
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.income_cat_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.case_upload
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.inv_pty_intrvw_dtl
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.inv_pty_stat_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.involved_party
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.involved_pty_rel
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.involved_pty_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.involved_pty_ver
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.mort_agmnt_scheme
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.mort_expenditure
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.mort_fee_admin
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.mort_fee_admn_tran
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.mort_fee_pay_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.mort_fee_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.org_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.org_unit_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.party_info
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.party_info_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.party_info_ver
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.party_info_ver_inc
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.party_rel_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.party_response
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.party_role_hist
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.party_role_info
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.party_role_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.personal_info
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.phone_addr
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.proc_function_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.prod_process
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.property_feature
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.property_held_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.property_party_rel
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.property_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.question_id_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.ref_filter_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.remort_reason_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.rental_income_dtls
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.repay_vehicle_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.retire_income_info
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.scheme_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.scr_decision_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.secured_prop
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.self_emt_info
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.self_emt_info_dtl
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.sol_panel
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.sol_panel_comment
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.solicitor_stat_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.sort_code_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.staff
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.sub_status_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.transact_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_sa_fut_cms
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_sa_fut_prods
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_scheme_dtls
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.ver_doc_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.interview_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.introducer_info
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.inv_pty_pers_info
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.lah_acc_dtl
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.epc_data
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.epc_rating_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.fsa_advice_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.further_adv_dtl
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_exist_life_plcy
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.il_pua_charge
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.income_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.intd_panel
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.ltv_calc_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.mandate_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.media_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.mortgage_history
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.intd_prod_ind_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.intd_reg_stat_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.intd_status_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.interest_rate_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.further_adv_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.green_improvements
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.green_registration
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.id_verification
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.msp_interim_gl
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_sub_acc_dtls
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.sub_charge_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.sub_chg_status_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.valuation_svy_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_warnings
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.underwr_param
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.val_status_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.valuation_svy_note
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.pu_charge
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.pu_mandate
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.pu_redemption
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.pua_charge
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.pua_mandate
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.pua_redemption
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.ps_filter_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ps_interest
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ps_prod_narrative
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ps_product
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ps_redemption
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.ps_sort_group
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.agmnt_accept_dtls
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.not_proceeding_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.prod_incentive
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.prod_rel_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.prod_trans
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.prod_unit_agmnt
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.public_data
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.public_info_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.reason_no_hh_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.reason_no_p4l_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.repay_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.resident_history
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.task
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.temp_mort_dtl
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.trans_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_data_gather
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_debt_consol
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_ip_dtl
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.prod_unit_rel
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.prod_unit_rel_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.prod_unt_agmnt_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.product
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.product_exceptions
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.review_change_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.self_emp_bus_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.solicitor_panel
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.sub_acc_change_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.subsequent_charge
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.product_rel
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.product_unit
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.product_unit_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.prop_class_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.prop_schedule_dtls
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ps_filter
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_pymnt_coll
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.ufss_repay_vehicle
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.underwr_referral
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.underwr_text
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.valuer_panel
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.ver_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW-MSP_ESS_TGT_KAF_INST-MSPSIT-commitstream
-        config:
-          num.partitions: "1"
-      - name: MSP-RAW.mor45dh.mor45.account_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.agmnt_link
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.aiv_status_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.bus_case_stat_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.caps_block_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.codos_org_unit
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.codos_sort_code
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.commercial_ref
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.completion
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.cond_purp_typ_val
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.condition
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.context_id
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.context_id_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dh.mor45.country_resid_typ
-        config:
-          num.partitions: "1"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.cr_ref
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.cr_ref_sum
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.cr_ref_sum_dtl
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.cr_srch_status
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.cr_summary_data
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-      - name: MSP-RAW.mor45dg.mor45.email_history_data
-        config:
-          num.partitions: "3"
-          confluent.key.schema.validation: true
-          confluent.value.schema.validation: true
-    schemas:
-      - principal: Group:GG_ESS_C3_AL04360_DEFAULT
-        subjects:
-          - AL04360-
-        role: DeveloperRead
-        prefixed: true
-      - principal: Group:GG_ESS_C3_AL04360_DEFAULT
-        subjects:
-          - AL04360-
-        role: DeveloperRead
-        prefixed: true
-      - principal: Group:GG_ESS_C3_AL04360_DEFAULT
-        subjects:
-          - AL04360-
-        role: DeveloperWrite
-        prefixed: true
-      - principal: User:msp01-appduv032e.machine.test.group
-        subjects:
-          - AL04360-MSP
-        role: DeveloperRead
-        prefixed: true
-      - principal: User:msp-appduvab70.onprem.cloud.test.group
-        subjects:
-          - AL04360-MSP
-        role: DeveloperRead
-        prefixed: true
-      - principal: User:msp01-appduv032e.machine.test.group
-        subjects:
-          - AL04360-MSP
-        role: DeveloperWrite
-        prefixed: true
-      - principal: User:msp-appduvab70.onprem.cloud.test.group
-        subjects:
-          - AL04360-MSP
-        role: DeveloperWrite
-        prefixed: true
-      - principal: User:replicator.sbs-int.oncp.group
-        subjects:
-          - AL04360-MSP
-        role: DeveloperRead
-        prefixed: true
-      - principal: User:replicator-edhmsp.sbs-int.oncp.group
-        subjects:
-          - AL04360-MSP
-        role: DeveloperRead
-        prefixed: true
-      - principal: User:clesskaas.sbs-int.oncp.group
-        subjects:
-          - AL04360-MSP
-        role: DeveloperRead
-        prefixed: true
-      - principal: User:clesskaas.sbs-int.oncp.group
-        subjects:
-          - AL04360-MSP
-        role: DeveloperManage
-      - principal: User:SRVAPPKAASREP01
-        subjects:
-          - AL04360-MSP
-        role: DeveloperRead
-        prefixed: true
+- name: ap-edh-msp-int-chunk1
+  al04360_producer_role:
+  - principal: User:msp01-appduv032e.machine.test.group
+    topic: AL04360-
+  - principal: User:msp-appduvab70.onprem.cloud.test.group
+    topic: AL04360-
+  - principal: User:GG_ESS_C3_AL04360_DEFAULT
+    topic: AL04360-
+  al04360_consumer_role:
+  - principal: User:msp01-appduv032e.machine.test.group
+    topic: AL04360-
+  - principal: User:msp-appduvab70.onprem.cloud.test.group
+    topic: AL04360-
+  - principal: User:replicator.sbs-int.oncp.group
+    topic: AL04360-
+  - principal: User:SRVAPPKAASREP01
+    topic: AL04360-
+  - principal: User:replicator-edhmsp.sbs-int.oncp.group
+    topic: AL04360-
+  - principal: User:clesskaas.sbs-int.oncp.group
+    topic: AL04360-
+  - principal: User:GG_ESS_C3_AL04360_DEFAULT
+    topic: AL04360-
+  al04360_consumer_group_role:
+  - principal: User:msp01-appduv032e.machine.test.group
+    group: msp01-appduv032e.machine.test.group
+  - principal: User:msp-appduvab70.onprem.cloud.test.group
+    group: msp-appduvab70.onprem.cloud.test.group
+  - principal: User:replicator.sbs-int.oncp.group
+    group: ap-edh-al04360
+  - principal: User:SRVAPPKAASREP01
+    group: ap-edh-al04360
+  - principal: User:replicator-edhmsp.sbs-int.oncp.group
+    group: ap-edh-al04360
+  - principal: User:clesskaas.sbs-int.oncp.group
+    group: ap-edh-al04360
+  - principal: User:GG_ESS_C3_AL04360_DEFAULT
+    group: ap-edh-al04360
+  al04360_c3_role:
+  - principal: Group:GG_ESS_C3_AL04360_DEFAULT
+    topic: AL04360-
+  - principal: User:GG_ESS_C3_AL04360_DEFAULT
+    topic: AL04360-
+  al04360_c3_group_role:
+  - principal: Group:GG_ESS_C3_AL04360_DEFAULT
+    group: AL04360-
+  - principal: User:GG_ESS_C3_AL04360_DEFAULT
+    group: AL04360-
+  topics:
+  - name: MSP-RAW.mor45dg.mor45.agmnt
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.agmnt_event
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_sub_account
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.intd_principal_fca
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.mortgage_agmnt
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.party_role
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.quot_illus
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.quotation
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.e_doc_metadata
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.e_doc_request
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.e_doc_response
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.agmnt_sub_status
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.aiv_score_dtl_hist
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_mort_agmnt
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.valuation_status
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.valuation_survey
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.sort_codes
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.il_invalid_rea_typ
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.illustration
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.agmnt_status
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.response_typ
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.funds_return
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.org_unit
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.agmnt_context
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.agmnt_info
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dj.mor45.completion_hist
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.offer
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.offer_spec_cond
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.pe_print_request
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.emt_info
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.agmnt_intrvw_dtl
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.doc_history
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.postal_addr
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.document
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.other_income_info
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dj.mor45.agmnt_status_hist
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.property
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.account_holdings
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.addr
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.addr_role
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.addr_role_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.addr_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.address_history
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.agmnt_event_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.agmnt_info_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.agmnt_info_typ_dtl
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.agmnt_status_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.agmnt_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.arr_fee_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.brand_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.caps_result
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.caps_result_dtl
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.case
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.case_note
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.case_status
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.comment_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.commitments
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.condition_purp_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.cr_score
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.cust_skill_lvl_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.ecom_channel_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.email_addr
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.emt_cont_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.emt_info_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.emt_summary
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.existing_prop
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.exp_summary
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.expenditure
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.expenditure_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.feature
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.feature_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_intro_fees
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_investment
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_monthly_pmnt
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_mort_calc
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_mort_fact_find
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_mort_prod_fact
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_property
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_repay_vehicle
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_sa_mnthly_pmnt
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_sa_redemption
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_sec_prop_featur
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_second_property
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.illustration_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.inc_verification
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.income
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.income_cat_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.case_upload
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.inv_pty_intrvw_dtl
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.inv_pty_stat_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.involved_party
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.involved_pty_rel
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.involved_pty_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.involved_pty_ver
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.mort_agmnt_scheme
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.mort_expenditure
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.mort_fee_admin
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.mort_fee_admn_tran
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.mort_fee_pay_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.mort_fee_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.org_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.org_unit_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.party_info
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.party_info_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.party_info_ver
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.party_info_ver_inc
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.party_rel_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.party_response
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.party_role_hist
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.party_role_info
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.party_role_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.personal_info
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.phone_addr
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.proc_function_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.prod_process
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.property_feature
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.property_held_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.property_party_rel
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.property_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.question_id_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.ref_filter_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.remort_reason_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.rental_income_dtls
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.repay_vehicle_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.retire_income_info
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.scheme_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.scr_decision_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.secured_prop
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.self_emt_info
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.self_emt_info_dtl
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.sol_panel
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.sol_panel_comment
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.solicitor_stat_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.sort_code_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.staff
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.sub_status_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.transact_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_sa_fut_cms
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_sa_fut_prods
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_scheme_dtls
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.ver_doc_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.interview_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.introducer_info
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.inv_pty_pers_info
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.lah_acc_dtl
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.epc_data
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.epc_rating_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.fsa_advice_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.further_adv_dtl
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_exist_life_plcy
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.il_pua_charge
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.income_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.intd_panel
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.ltv_calc_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.mandate_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.media_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.mortgage_history
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.intd_prod_ind_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.intd_reg_stat_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.intd_status_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.interest_rate_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.further_adv_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.green_improvements
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.green_registration
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.id_verification
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.msp_interim_gl
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_sub_acc_dtls
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.sub_charge_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.sub_chg_status_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.valuation_svy_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_warnings
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.underwr_param
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.val_status_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.valuation_svy_note
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.pu_charge
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.pu_mandate
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.pu_redemption
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.pua_charge
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.pua_mandate
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.pua_redemption
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.ps_filter_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ps_interest
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ps_prod_narrative
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ps_product
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ps_redemption
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.ps_sort_group
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.agmnt_accept_dtls
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.not_proceeding_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.prod_incentive
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.prod_rel_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.prod_trans
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.prod_unit_agmnt
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.public_data
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.public_info_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.reason_no_hh_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.reason_no_p4l_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.repay_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.resident_history
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.task
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.temp_mort_dtl
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.trans_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_data_gather
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_debt_consol
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_ip_dtl
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.prod_unit_rel
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.prod_unit_rel_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.prod_unt_agmnt_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.product
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.product_exceptions
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.review_change_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.self_emp_bus_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.solicitor_panel
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.sub_acc_change_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.subsequent_charge
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.product_rel
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.product_unit
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.product_unit_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.prop_class_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.prop_schedule_dtls
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ps_filter
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_pymnt_coll
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.ufss_repay_vehicle
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.underwr_referral
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.underwr_text
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.valuer_panel
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.ver_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW-MSP_ESS_TGT_KAF_INST-MSPSIT-commitstream
+    config:
+      num.partitions: '1'
+  - name: MSP-RAW.mor45dh.mor45.account_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.agmnt_link
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.aiv_status_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.bus_case_stat_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.caps_block_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.codos_org_unit
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.codos_sort_code
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.commercial_ref
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.completion
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.cond_purp_typ_val
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.condition
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.context_id
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.context_id_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dh.mor45.country_resid_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.cr_ref
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.cr_ref_sum
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.cr_ref_sum_dtl
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.cr_srch_status
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.cr_summary_data
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: MSP-RAW.mor45dg.mor45.email_history_data
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dg.mor45.agmnt_accept_dtls
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dh.mor45.not_proceeding_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dg.mor45.prod_incentive
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dh.mor45.prod_rel_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dg.mor45.prod_trans
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dg.mor45.prod_unit_agmnt
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dg.mor45.prod_unit_rel
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dh.mor45.prod_unit_rel_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dh.mor45.prod_unt_agmnt_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dg.mor45.product
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dh.mor45.product_exceptions
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dh.mor45.product_rel
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dg.mor45.product_unit
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dh.mor45.product_unit_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dh.mor45.prop_class_typ
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dg.mor45.prop_schedule_dtls
+    config:
+      num.partitions: '3'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  - name: AL04360-MSP-RAW.mor45dg.mor45.ps_filter
+    config:
+      num.partitions: '1'
+      confluent.key.schema.validation: true
+      confluent.value.schema.validation: true
+  schemas:
+  - principal: Group:GG_ESS_C3_AL04360_DEFAULT
+    subjects:
+    - AL04360-
+    role: DeveloperRead
+    prefixed: true
+  - principal: Group:GG_ESS_C3_AL04360_DEFAULT
+    subjects:
+    - AL04360-
+    role: DeveloperRead
+    prefixed: true
+  - principal: Group:GG_ESS_C3_AL04360_DEFAULT
+    subjects:
+    - AL04360-
+    role: DeveloperWrite
+    prefixed: true
+  - principal: User:msp01-appduv032e.machine.test.group
+    subjects:
+    - AL04360-MSP
+    role: DeveloperRead
+    prefixed: true
+  - principal: User:msp-appduvab70.onprem.cloud.test.group
+    subjects:
+    - AL04360-MSP
+    role: DeveloperRead
+    prefixed: true
+  - principal: User:msp01-appduv032e.machine.test.group
+    subjects:
+    - AL04360-MSP
+    role: DeveloperWrite
+    prefixed: true
+  - principal: User:msp-appduvab70.onprem.cloud.test.group
+    subjects:
+    - AL04360-MSP
+    role: DeveloperWrite
+    prefixed: true
+  - principal: User:replicator.sbs-int.oncp.group
+    subjects:
+    - AL04360-MSP
+    role: DeveloperRead
+    prefixed: true
+  - principal: User:replicator-edhmsp.sbs-int.oncp.group
+    subjects:
+    - AL04360-MSP
+    role: DeveloperRead
+    prefixed: true
+  - principal: User:clesskaas.sbs-int.oncp.group
+    subjects:
+    - AL04360-MSP
+    role: DeveloperRead
+    prefixed: true
+  - principal: User:clesskaas.sbs-int.oncp.group
+    subjects:
+    - AL04360-MSP
+    role: DeveloperManage
+  - principal: User:SRVAPPKAASREP01
+    subjects:
+    - AL04360-MSP
+    role: DeveloperRead
+    prefixed: true
